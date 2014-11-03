@@ -126,22 +126,22 @@
 % *** GRAPHICS RELATED PACKAGES ***
 %
 \ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
+  \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
-  % \graphicspath{{../pdf/}{../jpeg/}}
+  %\graphicspath{{../pdf/}{../jpeg/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+  \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 \else
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
   % will default to the driver specified in the system graphics.cfg if no
   % driver is specified.
-  % \usepackage[dvips]{graphicx}
+  \usepackage[dvips]{graphicx}
   % declare the path(s) where your graphic files are
-  % \graphicspath{{../eps/}}
+  %\graphicspath{{../eps/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.eps}
+  \DeclareGraphicsExtensions{.eps}
 \fi
 % graphicx was written by David Carlisle and Sebastian Rahtz. It is
 % required if you want graphics, photos, etc. graphicx.sty is already
@@ -251,7 +251,7 @@
 
 
 % *** SUBFIGURE PACKAGES ***
-%\usepackage[tight,footnotesize]{subfigure}
+\usepackage[tight,footnotesize]{subfigure}
 % subfigure.sty was written by Steven Douglas Cochran. This package makes it
 % easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
 % work, it is a good idea to load it with the tight package option to reduce
@@ -286,7 +286,7 @@
 
 % *** FLOAT PACKAGES ***
 %
-%\usepackage{fixltx2e}
+\usepackage{fixltx2e}
 % fixltx2e, the successor to the earlier fix2col.sty, was written by
 % Frank Mittelbach and David Carlisle. This package corrects a few problems
 % in the LaTeX2e kernel, the most notable of which is that in current
@@ -515,26 +515,50 @@ IEEEtran, journal, \LaTeX, paper, template.
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} demo file is intended to serve as a ``starter file''
-for IEEE journal papers produced under \LaTeX\ using
-IEEEtran.cls version 1.7 and later.
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-I wish you the best of success.
+%\IEEEPARstart{T}{his} demo file is intended to serve as a ``starter file''
+%for IEEE journal papers produced under \LaTeX\ using
+%IEEEtran.cls version 1.7 and later.
+%% You must have at least 2 lines in the paragraph with the drop letter
+%% (should never be an issue)
+%I wish you the best of success.
+%
+%\hfill mds
+% 
+%\hfill January 11, 2007
+%
+%\subsection{Subsection Heading Here}
+%Subsection text here.
+%
+%% needed in second column of first page if using \IEEEpubid
+%%\IEEEpubidadjcol
+%
+%\subsubsection{Subsubsection Heading Here}
+%Subsubsection text here.
 
-\hfill mds
- 
-\hfill January 11, 2007
+\IEEEPARstart{T}{he} present paper presents the ongoing research under cooperation project of Riga Technical University and company Accenture. Project is motivated by two problems: a) decreased productivity while staying in crowded room; b) errors in using room-scheduling service. Both problems lead to inefficient rooms’ usage. Specifically paper and project are focused on meeting rooms and classrooms. Project aim is to create solution that will allow to increase rooms usage. The present paper is focused on first stage of the project – task specification, problem analysis and survey of current situation.
 
-\subsection{Subsection Heading Here}
-Subsection text here.
+Let’s start with the description and analysis of the first problem – bad health and mental productivity decrease in crowded unventilated rooms. Who might be affected by the described problem? Survey shows that almost 90\% of office workers occasionally have the following problems: headache, noticeable decrease in mental abilities, fatigue, yawning. It may seem that these problems are typical and normal for hard working in office. However, medical research \cite{Usha} show that the cause of these problems is insufficient room ventilation that leads to high $CO_2$ concentration in the air. That problem is especially noticeable for average size rooms with more than three people. Moreover, it arises more often during winter, when windows are closed most of the time. And such situations are typical for institute lectures and companies meeting rooms.
 
-% needed in second column of first page if using \IEEEpubid
-%\IEEEpubidadjcol
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.5in]{co2_}
+\caption{Impact of $CO_2$ on Human Decision Making Performance}
+\label{co2_}
+\end{figure}
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+As could be seen from medical research results (see figure \ref{co2_}) high $CO_2$ concentration has biggest impact on basic mental activities, initiative actions and strategic thinking.
 
+All of the above mentioned applies to the situations when room ventilations is not sufficient. Therefore, arises question – How much ventilation is needed? There could not be universal solution, since each room has its own parameters. $CO_2$ concentration depends mainly on room volume, ventilation and amount of people. Therefore there is a need in real time monitoring solution that would raise an alarm if $CO_2$ concentration reaches critical level. As it will be shown in further chapters, existing solutions are able to measure$CO_2$ level and raise an alarm, but it’s not possible to embed them into any other platform. Therefore we are proposing wireless sensor network capable of measuring different kind of parameters, including $CO_2$ concentration.
+
+By using wireless sensor network it would be possible to create open type scalable platform. As well, proposed solution will not be limited to air quality and room occupancy detection. By integrating sensor network with cloud based services, it will allow creating decentralized system that could deliver data for different kind of user end devices.
+
+To create proposed solution, following tasks will be solved:
+\begin{itemize}
+\item Creating wireless access protocol;
+\item Sensor network integrating into existing cloud service – Windows Azure;
+\item Enhancing sensor nodes’ energy efficiency;
+\item Encrypted data transmission protocol realization.
+\end{itemize}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -551,7 +575,7 @@ Subsubsection text here.
 %
 %\begin{figure}[!t]
 %\centering
-%\includegraphics[width=2.5in]{myfigure}
+%\includegraphics[width=2.5in]{wake_up}
 % where an .eps filename suffix will be assumed under latex, 
 % and a .pdf suffix will be assumed for pdflatex; or what has been declared
 % via \DeclareGraphicsExtensions.
@@ -618,7 +642,7 @@ Subsubsection text here.
 % floats. This can be corrected via the \fnbelowfloat command of the
 % stfloats package.g
 
-\section{Related work}
+\section{Related Work}
 There exist variety of systems that have been proposed or developed in recent years for indoor environment monitoring. In this chapter we introduce readers to some of them.
 
 [2] is a theoretical research on environment monitoring. They provide necessary constraints and measured phenomena to implement any of structural, indoor and extreme event monitoring. For indoor environment monitoring temperature, humidity, true-light sensors, infrared-based presence sensors, and chemical sensors are useful and every environment monitoring application should consist of at least of these sensors. They as well point out that "interdisciplinary collaboration between researchers from computer science and structural engineering" is a key requirement for the monitoring of large public buildings. 
@@ -651,14 +675,30 @@ Besides distributed indoor environment monitoring systems there are other method
 % starts a section numbered zero.)
 %
 
+\section{Proposed System Architecture}
 
+\section{WSN Layer Implementation}
+
+\subsection{Energy Saving Operation}
+The energy cost of transmitting a single bit of information is approximately the same as that needed for processing a thousand operations in a typical WSN \cite{Anastasi}. The lifetime of a sensor network can be extended by jointly applying different techniques. For example, energy efficient protocols are aimed at minimizing the energy consumption during network activities. However, a large amount of energy is consumed by node components, CPU, radio, sensors, etc., even if they are idle. Power management schemes are thus used for switching off node components that are not temporarily needed \cite{Anastasi_Survey}. 
+NRF24L01 radio chips were used in this project. It consumes 12.3mA receiving data at full speed (2Mbps on-air data-rate) and 11.3mA sending data at 0dBm. Using simple batteries with this transceiver, WSN will operate approximately for 35 hours if only communicating. WSN also consists of several sensors that also will consume battery energy, so it reduces lifetime to approximately 24 hours.
+Energy saving methods can extend WSN lifetime for more times. Using SLEEP/WAKEUP protocol proposed in \cite{Anastasi_Survey} is possible that WSN will work for months without batteries change. WSN can use a Pipelined Tone Wakeup (PTW) scheme proposed in \cite {Yang}. There are two different channels for wakeup signals and data. In wakeup channel transmits only wakeup tone to awake neighboring nodes.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{wake_up}
+\caption{Pipelined wakeup procedure in PTW}
+\label{wake_up}
+\end{figure}
+ 
+Let’s suppose that node A has to transmit a data message to node C through node B. At time $t_0$, A starts sending a wakeup tone over wakeup channel. This tone awakes all A’s neighbors. At time $t_1$ A sends a notification packet to node B on the data channel to inform that the next data packet will be destined to B. All A’s neighbors, instead node B, learn that the following message is not intended for them and they turn off their data radio. Instead, B realizes to be the destination of next data message, and replies with a wakeup acknowledgment on the data channel. After acknowledgement, A starts transmitting the data packet on the data channel. At the same time, B starts sending a tone on the wakeup channel to awake all its neighbors. As shown in fiure \ref{wake_up}, the packet transmission from A to B on the data channel, and the B’s tone transmission on the wakeup channel are done in parallel.
+As the WSN will be used in offices with known work-time, then all nodes will work at this time. After work-time all nodes power off all sensors, radio and then go to deep SLEEP mode. According to office, nodes will WAKEUP several minutes before work-time starts. $CO_2$ sensor can be disconnected from power or be connected only to make a few measurements of the air, and then again disconnected. This will give significant energy economy, because there is known that the air quality is best before work-time.
+
+\subsection{Secure Communication}
+To create the reliable system it is needed to ensure data protection at all layers. Since wireless sensor nodes are limited in computational resources, it is not possible to use typical encryption. As a solution to existing problem it is possible to use Elliptic curve cryptography. It would allow establishing data protection comparable with typical encryption protocols like TLS, but using less computational resoursec. ECC - cryptographic schemes based relying on scalar multiplication of elliptic curve points. For elliptic curves, the problem assumed to be intractable is finding the discrete logarithm of an element. \cite {ECC} Key in elliptic curve cryptography can be shorter, but still offering same security as RSA. For example, a 160-bit ECC key provides the same level of security as a 1024-bit RSA key, and a 224-bit ECC key provides the same security as a 2048-bit RSA key. Smaller keys mean faster computation, lower power consumption, and memory and bandwidth savings \cite{Huge}.
 
 \section{Conclusion}
 The conclusion goes here.
-
-
-
-
 
 % if have a single appendix:
 %\appendix[Proof of the Zonklar Equations]
@@ -674,15 +714,14 @@ The conclusion goes here.
 % starts a section numbered zero.)
 %
 
-
-\appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
-
-% you can choose not to have a title for an appendix
-% if you want by leaving the argument blank
-\section{}
-Appendix two text goes here.
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%Appendix one text goes here.
+%
+%% you can choose not to have a title for an appendix
+%% if you want by leaving the argument blank
+%\section{}
+%Appendix two text goes here.
 
 
 % use section* for acknowledgement
@@ -717,44 +756,57 @@ The authors would like to thank...
 % http://www.michaelshell.org/tex/ieeetran/bibtex/
 %\bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
+%\bibliography{IEEEabrv,paper}
 %
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{2}
 
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-\bibitem{IEEEhowto:Demirbas05wirelesssenso}
-@ARTICLE{Demirbas05wirelesssensor,
-    author = {Murat Demirbas},
-    title = {Wireless Sensor Networks for Monitoring of Large Public Buildings},
-    journal = {Computer Networks},
-    year = {2005},
-    volume = {46},
-    pages = {605--634}
-}
-\bibitem{IEEEhowto:szucheng}
-Szu-Cheng Chien, Robert Zach and Ardeshir Mahdavi, “DEVELOPING USER INTERFACES FOR MONITORING SYSTEMS IN BUILDINGS”, IADIS International Conference Interfaces and Human Computer Interaction 2011, pages 29-36, ISBN: 978-972-8939-52-6
 
-\bibitem{IEEEhowto:bldg}
-BLDG services group inc., white paper “Power Monitoring in an Office Building”, 2011, p. 9, Edmonton Alberta, Canada
 
-\bibitem{IEEEhowto:qifen}
-Qifen Dong, Li Yu, Huanjia Lu, Zhen Hong, Yourong Chen, “Design of Building Monitoring Systems Based on Wireless Sensor Networks”, Wireless Sensor Network, 2010, 2, 703-709, doi:10.4236/wsn.2010.29085
-
-\bibitem{IEEEhowto:Teodora}
-Teodora Trifonova, Valentina Markova, Ventseslav Draganov, KrasimiraAngelova and Vasil Dimitrov, “Smart sensor network for ergonomic evaluation of working environment”,  ICEST 2013, At Ohrid, Macedonia, Volume: vol.1 pp 371-375
-
-\bibitem{IEEEhowto:IEQ}
-IEQ Chek, product description, online: http://www.tequipment.net/assets/1/26/Documents/Bacharach/ 1510\_0002/1510\_0002\_doc\_1.pdf, resource accessed on: 26.10.2014
-
-\bibitem{IEEEhowto:instruments}
-IEQ instruments, product description, online: http://www.skcinc.com/iaqinstruments.asp, resource accessed on: 26.10.2014
-
+\begin{thebibliography}{999}
+\bibitem{Anastasi}  Anastasi, Giuseppe, et al.  "How to prolong the lifetime of wireless sensor networks." {\it Mobile Ad Hoc and Pervasive Communications} (2006): 1-26.
+\bibitem{Anastasi_Survey} Anastasi, Giuseppe, et al. "Energy conservation in wireless sensor networks: A survey." {\it Ad Hoc Networks} 7.3 (2009): 537-568.
+\bibitem{Yang} Yang, Xue, and N. F. Vaidya. "A wakeup scheme for sensor networks: Achieving balance between energy saving and end-to-end delay." {\it Real-Time and Embedded Technology and Applications Symposium, 2004. Proceedings. RTAS 2004. 10th IEEE.} IEEE, 2004.
+\bibitem{Usha} Satish, Usha. "Is CO2 an Indoor Pollutant? Direct Effects of Low to Moderate CO2 Concentrations on Human Decision? Making Performance." {\it Environmental health perspectives} (2014).
+%\bibitem{ECC} SEC1: Elliptic Curve Cryptography [Electronic resource] – http://www.secg.org/download/aid-385/sec1_final.pdf – Resource reported at 2009, 19’th of October
+\bibitem{ECC} SEC1: Elliptic Curve Cryptography [Electronic resource] – http://www.secg.org/download/aid-385/sec1\_final.pdf – Resource reported at 2009, 19’th of October
+\bibitem{Huge} Huge Advance for Tiny Devices [Electronic resource] – http://research.sun.com /spotlight/2005\_02\_10.tiny\_devices.html – Resource reported at 2009, 19’th of October
 \end{thebibliography}
+
+%\begin{thebibliography}{2}
+
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+%\bibitem{IEEEhowto:Demirbas05wirelesssenso}
+%@ARTICLE{Demirbas05wirelesssensor,
+%    author = {Murat Demirbas},
+%    title = {Wireless Sensor Networks for Monitoring of Large Public Buildings},
+%    journal = {Computer Networks},
+%    year = {2005},
+%    volume = {46},
+%    pages = {605--634}
+%}
+%\bibitem{IEEEhowto:szucheng}
+%Szu-Cheng Chien, Robert Zach and Ardeshir Mahdavi, “DEVELOPING USER INTERFACES FOR MONITORING SYSTEMS IN BUILDINGS”, IADIS International Conference Interfaces and Human Computer Interaction 2011, pages 29-36, ISBN: 978-972-8939-52-6
+%
+%\bibitem{IEEEhowto:bldg}
+%BLDG services group inc., white paper “Power Monitoring in an Office Building”, 2011, p. 9, Edmonton Alberta, Canada
+%
+%\bibitem{IEEEhowto:qifen}
+%Qifen Dong, Li Yu, Huanjia Lu, Zhen Hong, Yourong Chen, “Design of Building Monitoring Systems Based on Wireless Sensor Networks”, Wireless Sensor Network, 2010, 2, 703-709, doi:10.4236/wsn.2010.29085
+%
+%\bibitem{IEEEhowto:Teodora}
+%Teodora Trifonova, Valentina Markova, Ventseslav Draganov, KrasimiraAngelova and Vasil Dimitrov, “Smart sensor network for ergonomic evaluation of working environment”,  ICEST 2013, At Ohrid, Macedonia, Volume: vol.1 pp 371-375
+%
+%\bibitem{IEEEhowto:IEQ}
+%IEQ Chek, product description, online: http://www.tequipment.net/assets/1/26/Documents/Bacharach/ 1510\_0002/1510\_0002\_doc\_1.pdf, resource accessed on: 26.10.2014
+%
+%\bibitem{IEEEhowto:instruments}
+%IEQ instruments, product description, online: http://www.skcinc.com/iaqinstruments.asp, resource accessed on: 26.10.2014
+
+%\end{thebibliography}
 
 % biography section
 % 
@@ -767,22 +819,22 @@ IEQ instruments, product description, online: http://www.skcinc.com/iaqinstrumen
 %\begin{biography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
 
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
-\end{IEEEbiography}
-
-% if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% insert where needed to balance the two columns on the last page with
-% biographies
-%\newpage
-
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
+%\begin{IEEEbiography}{Michael Shell}
+%Biography text here.
+%\end{IEEEbiography}
+%
+%% if you will not have a photo at all:
+%\begin{IEEEbiographynophoto}{John Doe}
+%Biography text here.
+%\end{IEEEbiographynophoto}
+%
+%% insert where needed to balance the two columns on the last page with
+%% biographies
+%%\newpage
+%
+%\begin{IEEEbiographynophoto}{Jane Doe}
+%Biography text here.
+%\end{IEEEbiographynophoto}
 
 % You can push biographies down or up by placing
 % a \vfill before or after them. The appropriate
