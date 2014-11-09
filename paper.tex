@@ -649,17 +649,14 @@ There exist variety of systems that have been proposed or developed in recent ye
 
 In [3] is a research that by surveying more than 150 persons in Europe and Asia provide information of what environmental factors are important and how to present them to users, to build indoor environment monitoring system. The emphasis is put on designing easy to use and easy to understand user interface of such systems.
 
-One example of environmental monitoring is buildings power consumption monitoring. [4] is such an example. This paper provide a description of the power monitoring system in terms of implementation and use, as well provide some examples of the benefits and savings that have been achieved through its use. By monitored values they calculate: (1) percent power use is calculated for each distribution panel and for each tenant, (2) tenant estimated energy cost month to date, (3) estimated CO2 emissions month to date and (4) power use per unit area (watts per square foot). Which then is used to identify and prioritize HVAC optimization programs as well as to assess and quantify the effects of changes on energy consumption.
+One example of environmental monitoring is buildings power consumption monitoring. [4] is such an example. This paper provide a description of the power monitoring system in terms of implementation and use, as well provide some examples of the benefits and savings that have been achieved through its use. By monitored values they calculate: (1) percent power use is calculated for each distribution panel and for each tenant, (2) tenant estimated energy cost month to date, (3) estimated $CO_2$ emissions month to date and (4) power use per unit area (watts per square foot). Which then is used to identify and prioritize HVAC optimization programs as well as to assess and quantify the effects of changes on energy consumption.
 
 [4] presents a Building Monitoring system based on Wireless Sensor Networks - BMWSN. Which is a clustering-based network specified for building environment monitoring. In this system temperature/ humidity sensors (SHT11), light sensors (STL2550), and human detection sensors
 (BISS0001) are used. The cluster-heads perform data aggregation and form a tree hierarchy to forward data to server. System implements simple alarm messaging to inform user of exceeded environmental variables, but no active environment control is implemented.
 
-[5] presents a Building Monitoring system based on Wireless Sensor Networks - BMWSN. Which is a clustering-based network specified for building environment monitoring. In this system temperature/ humidity sensors (SHT11), light sensors (STL2550), and human detection sensors
-(BISS0001) are used. The cluster-heads perform data aggregation and form a tree hierarchy to forward data to server. System implements simple alarm messaging to inform user of exceeded environmental variables, but no active environment control is implemented.
-
 [6] presents development of a smart sensor network which allows the monitoring of the parameters in the workplace required for ergonomic assessment of working conditions. Phenomena measured are temperature (TC1047A), humidity (HCH-1000), intensity of light (OPT101) and ambient noise (SPM0404LE5H-QB-38342). Proposed system is tested in very small scale compared to the previous systems, but provides insight of how environmental parameters can be measured in workplace.
 
-Besides distributed indoor environment monitoring systems there are other methods used for the same purpose. One such method is by using handheld devices. They are frequently referred to as "Indoor Environmental Quality" instruments. Price for such devices is usually very large drawback, because one such device can cost even several thousand US dollars, furthermore data often can be used only locally or best case scenario saved on SD card. But on high side of such devices is accuracy and variety of sensors in such device. For example IEQ Check\texttrademark\ produced  by Bacharach can use up to 7 differnet sensors - temperature, relative humidity and variation of Carbon Dioxide (CO2), Carbon Monoxide (CO), Oxygen (O2), Formaldehyde (HCHO), Total Volatile Organic Compounds (TVOCs), Nitrogen Dioxide (NO2), Nitric Oxide (NO), Sulfur Dioxide (SO2), Ammonia (NH3), Hydrogen Sulfide (H2S) and Combustible Gases [7]. Other devices can even detect dust (even nano-scale), measure airflow [8]
+Besides distributed indoor environment monitoring systems there are other methods used for the same purpose. One such method is by using handheld devices. They are frequently referred to as "Indoor Environmental Quality" instruments. Price for such devices is usually very large drawback, because one such device can cost even several thousand US dollars, furthermore data often can be used only locally or best case scenario saved on SD card. But on high side of such devices is accuracy and variety of sensors in such device. For example IEQ Check\texttrademark\ produced  by Bacharach can use up to 7 differnet sensors - temperature, relative humidity and variation of Carbon Dioxide ($CO_2$), Carbon Monoxide (CO), Oxygen ($O_2$), Formaldehyde (HCHO), Total Volatile Organic Compounds (TVOCs), Nitrogen Dioxide ($NO_2$), Nitric Oxide (NO), Sulfur Dioxide ($SO_2$), Ammonia ($NH_3$), Hydrogen Sulfide ($H_2${\it S}) and Combustible Gases [7]. Other devices can even detect dust (even nano-scale), measure airflow [8]
 
 % if have a single appendix:
 %\appendix[Proof of the Zonklar Equations]
@@ -676,6 +673,27 @@ Besides distributed indoor environment monitoring systems there are other method
 %
 
 \section{Proposed System Architecture}
+As previouse research shows none of existing solutions can be reused entirely being a solution for our reasearch problem. Thus we have worked on a proposal and netwroks architecture that might solve both problems: meeting room reservation vs. actual utilization monitoring and scalable solution for monitoring and analysis of office environment. 
+
+\begin{figure}[!t]
+\centering
+%\includegraphics[width=2.5in]{IoT_Scheme}
+\includegraphics[width=3.5in]{IoT_Scheme}
+\caption{Scheme for the proposed Internet of Things office environment monitoring solution.}
+\label{IoT_Scheme}
+\end{figure}
+
+Referring to figure \ref{IoT_Scheme}  where a scheme for the proposed Internet of Things office environment monitoring solution is depicted the main parts of the system can be discussed. The system consists of two main parts: on-site destributed heterodenouse wireless sensor network and sensorial data storage and processing warehouse formed using cloud computing technology, here Azure provided cloud platform has been selected. 
+
+On-site sensor network is heterogenouse because of three different types of heterogenousity:
+\begin {itemize}
+\item Communication protocols - In the current work we are combining different communication protocols. Sensorial data may be trasfered via proprietary protocol stack and/or standard-based protocol stacks. Here we are testing our designed highly-scalable WSN protocol stack's interconnection with different standartized solutions, like ZigBee and Wi-Fi enabled nodes.
+\item Sensor nodes' hardware - since there are presented two ZigBee and Wi-Fi communication protocols based on standards it is obviouse that corresponding sensor nodes should have thase standards enablement hardware. For instance to implements ZigBee communication sensor node should be equiped with IEEE 802.15.4 fully compatible radio chip. As well to enable platform readiness for Wi-Fi protocol stack corresponding devices should enable 802.11b/g/n support in the hardware layer, too. Apart from these two examples third one the proprietary protocol stack can not be so demanding on particular hardware since it should only satisfy the very basic software needs.
+\item Powering mode - mostly wireless sensor nodes are battery-powered devices. But in the current solution we have NetAtmo Wi-Fi-enabled sensor nodes powered as trough battary as well via power line. Such combination is provided because of architectural limitations of that solution: there is a GW and only some sensor nodes, normally only one per GW. ZigBee solution needs different type of nodes, too. Tey are: coordinator, router and end device, where coordinator and router nodes with greate probability may be asked to be constantly powered because of the scenario they are fulfilling. Talking about proprietary WSN there might be both powering modes with different sensor nodes.
+\end {itemize}
+
+It is clear that sensorial data should be collected on wireless sensor layer and trasmitted to the cloud platform. Since we have three different technologies selected as parts of WSN, the trasnformation component(-s) should be provided. That component, here it is a Gateway will gather data from one protocol stack and transfers it to another one, here via TCP/IP protocol stack 
+
 
 \section{WSN Layer Implementation}
 
@@ -683,6 +701,7 @@ Besides distributed indoor environment monitoring systems there are other method
 The energy cost of transmitting a single bit of information is approximately the same as that needed for processing a thousand operations in a typical WSN \cite{Anastasi}. The lifetime of a sensor network can be extended by jointly applying different techniques. For example, energy efficient protocols are aimed at minimizing the energy consumption during network activities. However, a large amount of energy is consumed by node components, CPU, radio, sensors, etc., even if they are idle. Power management schemes are thus used for switching off node components that are not temporarily needed \cite{Anastasi_Survey}. 
 NRF24L01 radio chips were used in this project. It consumes 12.3mA receiving data at full speed (2Mbps on-air data-rate) and 11.3mA sending data at 0dBm. Using simple batteries with this transceiver, WSN will operate approximately for 35 hours if only communicating. WSN also consists of several sensors that also will consume battery energy, so it reduces lifetime to approximately 24 hours.
 Energy saving methods can extend WSN lifetime for more times. Using SLEEP/WAKEUP protocol proposed in \cite{Anastasi_Survey} is possible that WSN will work for months without batteries change. WSN can use a Pipelined Tone Wakeup (PTW) scheme proposed in \cite {Yang}. There are two different channels for wakeup signals and data. In wakeup channel transmits only wakeup tone to awake neighboring nodes.
+
 
 \begin{figure}[!t]
 \centering
@@ -724,13 +743,6 @@ The conclusion goes here.
 %Appendix two text goes here.
 
 
-% use section* for acknowledgement
-\section*{Acknowledgment}
-
-
-The authors would like to thank...
-
-
 % Can use something like this to put references on a page
 % by themselves when using endfloat and the captionsoff option.
 \ifCLASSOPTIONcaptionsoff
@@ -768,7 +780,7 @@ The authors would like to thank...
 \bibitem{Anastasi}  Anastasi, Giuseppe, et al.  "How to prolong the lifetime of wireless sensor networks." {\it Mobile Ad Hoc and Pervasive Communications} (2006): 1-26.
 \bibitem{Anastasi_Survey} Anastasi, Giuseppe, et al. "Energy conservation in wireless sensor networks: A survey." {\it Ad Hoc Networks} 7.3 (2009): 537-568.
 \bibitem{Yang} Yang, Xue, and N. F. Vaidya. "A wakeup scheme for sensor networks: Achieving balance between energy saving and end-to-end delay." {\it Real-Time and Embedded Technology and Applications Symposium, 2004. Proceedings. RTAS 2004. 10th IEEE.} IEEE, 2004.
-\bibitem{Usha} Satish, Usha. "Is CO2 an Indoor Pollutant? Direct Effects of Low to Moderate CO2 Concentrations on Human Decision? Making Performance." {\it Environmental health perspectives} (2014).
+\bibitem{Usha} Satish, Usha. "Is $CO_2$ an Indoor Pollutant? Direct Effects of Low to Moderate $CO_2$ Concentrations on Human Decision? Making Performance." {\it Environmental health perspectives} (2014).
 \bibitem{ECC} SEC1: Elliptic Curve Cryptography [Electronic resource] – http://www.secg.org/download/aid-385/sec1\_final.pdf – Resource reported at 2009, 19’th of October
 \bibitem{Huge} Huge Advance for Tiny Devices [Electronic resource] – http://research.sun.com /spotlight/2005\_02\_10.tiny\_devices.html – Resource reported at 2009, 19’th of October
 \end{thebibliography}

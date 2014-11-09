@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2012.9.26)  3 NOV 2014 02:00
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2012.9.26)  9 NOV 2014 15:58
 entering extended mode
-**D:/Science/Конференции/Conference*papers/RTU_2014/2014.11.02/untit
-led-1.tex
-("D:/Science/Конференции/Conference papers/RTU_2014/2014.11.02/untit
-led-1.tex"
+**D:/Science/Конференции/Conference*papers/RTU_2014/2014.11.08/paper
+.tex
+("D:/Science/Конференции/Conference papers/RTU_2014/2014.11.08/paper
+.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -250,8 +250,8 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
 LaTeX Info: Redefining \em on input line 420.
 )
-("D:\Science\Конференции\Conference papers\RTU_2014\2014.11.02\untit
-led-1.aux")
+("D:\Science\Конференции\Conference papers\RTU_2014\2014.11.08\paper
+.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 392.
 LaTeX Font Info:    ... okay on input line 392.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 392.
@@ -318,27 +318,30 @@ Missing character: There is no ’ in font ptmr7t!
 
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+File: IoT_Scheme.eps Graphic file (type eps)
+ <IoT_Scheme.eps>
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 681--682
+ [][] 
+ []
 
+[2]
 File: wake_up.eps Graphic file (type eps)
-
-<wake_up.eps>
+ <wake_up.eps>
 Missing character: There is no ’ in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
- [2]
 Missing character: There is no – in font ptmr7t!
 Missing character: There is no – in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
 []\OT1/ptm/m/n/8 SEC1: El-lip-tic Curve Cryp-tog-ra-phy [Elec-tronic re-source]
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
 \OT1/ptm/m/n/8 http://www.secg.org/download/aid-385/sec1[]final.pdf  Re-source
  []
 
@@ -346,28 +349,25 @@ Missing character: There is no – in font ptmr7t!
 Missing character: There is no – in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 774--775
+Underfull \hbox (badness 10000) in paragraph at lines 785--786
 []\OT1/ptm/m/n/8 Huge Ad-vance for Tiny De-vices [Elec-tronic re-source]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 774--775
+Underfull \hbox (badness 10000) in paragraph at lines 785--786
 \OT1/ptm/m/n/8 http://research.sun.com /spot-light/2005[]02[]10.tiny[]devices.h
 tml
  []
 
-[3
-
-]
-("D:\Science\Конференции\Conference papers\RTU_2014\2014.11.02\untit
-led-1.aux") ) 
+[3] ("D:\Science\Конференции\Conference papers\RTU_2014\2014.11.08\p
+aper.aux") ) 
 Here is how much of TeX's memory you used:
- 1534 strings out of 429156
- 24949 string characters out of 3168943
- 82188 words of memory out of 3000000
- 4826 multiletter control sequences out of 15000+200000
+ 1537 strings out of 429156
+ 24939 string characters out of 3168943
+ 81188 words of memory out of 3000000
+ 4828 multiletter control sequences out of 15000+200000
  29648 words of font info for 67 fonts, out of 3000000 for 9000
  789 hyphenation exceptions out of 8191
- 26i,7n,24p,1091b,235s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,7n,24p,1110b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on untitled-1.pdf (3 pages).
+Output written on paper.pdf (3 pages).
