@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2012.9.26)  9 NOV 2014 15:58
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2012.9.26)  10 NOV 2014 01:50
 entering extended mode
 **D:/Science/Конференции/Conference*papers/RTU_2014/2014.11.08/paper
 .tex
@@ -202,7 +202,10 @@ Requested font "ptmbi7t" at 24.0pt
 \@IEEEtmpitemindent=\dimen124
 \c@IEEEbiography=\count94
 \@IEEEtranrubishbin=\box27
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\was\gensymb.sty"
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
@@ -226,14 +229,22 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen127
+\extrarowheight=\dimen128
+\NC@list=\toks16
+\extratabsurround=\skip44
+\backup@length=\skip45
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip44
-\subfigcapskip=\skip45
-\subfigcaptopadj=\dimen127
-\subfigbottomskip=\skip46
-\subfigcapmargin=\dimen128
-\subfiglabelskip=\skip47
+\subfigtopskip=\skip46
+\subfigcapskip=\skip47
+\subfigcaptopadj=\dimen129
+\subfigbottomskip=\skip48
+\subfigcapmargin=\dimen130
+\subfiglabelskip=\skip49
 \c@subfigure=\count95
 \c@lofdepth=\count96
 \c@subtable=\count97
@@ -243,8 +254,8 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 * Local config file subfigure.cfg used *
 ****************************************
 ("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
-\subfig@top=\skip48
-\subfig@bottom=\skip49
+\subfig@top=\skip50
+\subfig@bottom=\skip51
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
 Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
@@ -266,6 +277,17 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 392.
 LaTeX Font Info:    ... okay on input line 392.
 
 -- Lines per column: 58 (exact).
+LaTeX Info: Redefining \celsius on input line 392.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 392
+.
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 392.
+Package gensymb Info: Using \Omega for \ohm on input line 392.
+
+Package gensymb Warning: Not defining \micro.
+
 Requested font "cmr9" at 9.0pt
  -> cmr9
 Requested font "cmr6" at 6.0pt
@@ -279,13 +301,13 @@ Requested font "cmsy9" at 9.0pt
 Requested font "cmsy6" at 6.0pt
  -> cmsy6
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 482.
+(Font)              <9> on input line 486.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 482.
+(Font)              <6> on input line 486.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 482.
+(Font)              <5> on input line 486.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 482.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 486.
 Requested font "ptmb7t" at 6.0pt
  -> ptmb7t
 Requested font "ptmrc7t" at 10.0pt
@@ -299,7 +321,7 @@ Missing character: There is no – in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 Missing character: There is no – in font ptmr7t!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 540.
+(Font)              <7> on input line 544.
 File: co2_.eps Graphic file (type eps)
 <co2_.eps>
 Requested font "cmr8" at 8.0pt
@@ -309,7 +331,7 @@ Requested font "cmmi8" at 8.0pt
 Requested font "cmsy8" at 8.0pt
  -> cmsy8
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 545.
+(Font)              <8> on input line 549.
 Missing character: There is no – in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 Missing character: There is no – in font ptmr7t!
@@ -320,28 +342,50 @@ Missing character: There is no ’ in font ptmr7t!
 ]
 File: IoT_Scheme.eps Graphic file (type eps)
  <IoT_Scheme.eps>
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 681--682
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 683--684
  [][] 
  []
 
 [2]
+Requested font "ptmrc7t" at 8.0pt
+ -> ptmrc7t
+Missing character: There is no ’ in font ptmr7t!
+
+Overfull \hbox (23.94987pt too wide) in paragraph at lines 712--729
+[][] 
+ []
+
+File: iot_arch.eps Graphic file (type eps)
+<iot_arch.eps>
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 735--736
+ [][] 
+ []
+
+[3]
+File: ArduinoNano3.eps Graphic file (type eps)
+ <ArduinoNano3.eps>
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 750--751
+ [][] 
+ []
+
 File: wake_up.eps Graphic file (type eps)
- <wake_up.eps>
+<wake_up.eps>
 Missing character: There is no ’ in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
+ [4]
 Missing character: There is no – in font ptmr7t!
 Missing character: There is no – in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 784--785
+Underfull \hbox (badness 10000) in paragraph at lines 837--838
 []\OT1/ptm/m/n/8 SEC1: El-lip-tic Curve Cryp-tog-ra-phy [Elec-tronic re-source]
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 784--785
+Underfull \hbox (badness 10000) in paragraph at lines 837--838
 \OT1/ptm/m/n/8 http://www.secg.org/download/aid-385/sec1[]final.pdf  Re-source
  []
 
@@ -349,25 +393,90 @@ Missing character: There is no – in font ptmr7t!
 Missing character: There is no – in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 785--786
+Underfull \hbox (badness 10000) in paragraph at lines 838--839
 []\OT1/ptm/m/n/8 Huge Ad-vance for Tiny De-vices [Elec-tronic re-source]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 785--786
+Underfull \hbox (badness 10000) in paragraph at lines 838--839
 \OT1/ptm/m/n/8 http://research.sun.com /spot-light/2005[]02[]10.tiny[]devices.h
 tml
  []
 
-[3] ("D:\Science\Конференции\Conference papers\RTU_2014\2014.11.08\p
-aper.aux") ) 
-Here is how much of TeX's memory you used:
- 1537 strings out of 429156
- 24939 string characters out of 3168943
- 81188 words of memory out of 3000000
- 4828 multiletter control sequences out of 15000+200000
- 29648 words of font info for 67 fonts, out of 3000000 for 9000
- 789 hyphenation exceptions out of 8191
- 26i,7n,24p,1110b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no ” in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no ” in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no ” in font ptmr7t!
 
-Output written on paper.pdf (3 pages).
+Underfull \hbox (badness 6859) in paragraph at lines 842--843
+\OT1/ptm/m/n/8 De-sign of Build-ing Mon-i-tor-ing Sys-tems Based on Wire-less
+ []
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 842--843
+\OT1/ptm/m/n/8 Sen-sor Net-works, Wire-less Sen-sor Net-work, 2010, 2, 703-709,
+
+ []
+
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no ” in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--845
+[]\OT1/ptm/m/n/8 XBee 802.15.4 - Digi In-ter-na-tional. - \OT1/ptm/m/it/8 In-te
+r-net re-source:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--845
+\OT1/ptm/m/it/8 http://www.digi.com/products/wireless-wired-embedded-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--845
+\OT1/ptm/m/it/8 solutions/zigbee-rf-modules/point-multipoint-rfmodules/xbee-ser
+ies1-
+ []
+
+
+Underfull \hbox (badness 4752) in paragraph at lines 846--847
+[]\OT1/ptm/m/n/8 Digital 16bit Se-rial Out-put Type Am-bi-ent Light Sen-sor IC.
+
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 846--847
+\OT1/ptm/m/n/8 - \OT1/ptm/m/it/8 http://www.dfrobot.com/image/data/SEN0097/BH17
+50FVI.pdf \OT1/ptm/m/n/8 Ac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 847--848
+[]\OT1/ptm/m/n/8 HC-SR501 PIR mo-tion de-tec-tor. -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--849
+[]\OT1/ptm/m/n/8 IEQ Chek, prod-uct de-scrip-tion, on-line:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--849
+\OT1/ptm/m/n/8 http://www.tequipment.net/assets/1/26/Documents/Bacharach/
+ []
+
+[5
+
+] ("D:\Science\Конференции\Conference papers\RTU_2014\2014.11.08\pap
+er.aux") ) 
+Here is how much of TeX's memory you used:
+ 1646 strings out of 429156
+ 26146 string characters out of 3168943
+ 84120 words of memory out of 3000000
+ 4930 multiletter control sequences out of 15000+200000
+ 30294 words of font info for 68 fonts, out of 3000000 for 9000
+ 789 hyphenation exceptions out of 8191
+ 26i,9n,24p,2135b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on paper.pdf (5 pages).

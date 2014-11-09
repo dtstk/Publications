@@ -121,7 +121,7 @@
 
 
 
-
+\usepackage{gensymb}
 
 % *** GRAPHICS RELATED PACKAGES ***
 %
@@ -214,7 +214,7 @@
 
 % *** ALIGNMENT PACKAGES ***
 %
-%\usepackage{array}
+\usepackage{array}
 % Frank Mittelbach's and David Carlisle's array.sty patches and improves
 % the standard LaTeX2e array and tabular environments to provide better
 % appearance and additional user controls. As the default LaTeX2e table
@@ -393,7 +393,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Bare Demo of IEEEtran.cls for Journals}
+\title{An approach for meeting room activity monitoring and analysis}
 %
 %
 % author names and IEEE memberships
@@ -405,14 +405,18 @@
 % was not built to handle multiple paragraphs
 %
 
-\author{Michael~Shell,~\IEEEmembership{Member,~IEEE,}
-        John~Doe,~\IEEEmembership{Fellow,~OSA,}
-        and~Jane~Doe,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
-\thanks{M. Shell is with the Department
-of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
-GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
-\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
-\thanks{Manuscript received April 19, 2005; revised January 11, 2007.}}
+\author{R. Taranovs,~\IEEEmembership{Member,~IEEE,}
+        V. Jesilevskis,
+        G. Miezitis,~\IEEEmembership{Member,IEEE},
+        D. Bliznjuks,~\IEEEmembership{Member,IEEE},
+        E. Klavins,
+        A. Kalnins,
+        V. Zagursky, ~\IEEEmembership{Member,IEEE}}
+%\thanks{M. Shell is with the Department
+%of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
+%GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
+%\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
+%\thanks{Manuscript received April 19, 2005; revised January 11, 2007.}}
 
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
@@ -435,7 +439,7 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 
 
 % The paper headers
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+\markboth{Galveni atst. neizmant.}%
 {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
@@ -645,18 +649,18 @@ To create proposed solution, following tasks will be solved:
 \section{Related Work}
 There exist variety of systems that have been proposed or developed in recent years for indoor environment monitoring. In this chapter we introduce readers to some of them.
 
-[2] is a theoretical research on environment monitoring. They provide necessary constraints and measured phenomena to implement any of structural, indoor and extreme event monitoring. For indoor environment monitoring temperature, humidity, true-light sensors, infrared-based presence sensors, and chemical sensors are useful and every environment monitoring application should consist of at least of these sensors. They as well point out that "interdisciplinary collaboration between researchers from computer science and structural engineering" is a key requirement for the monitoring of large public buildings. 
+\cite{Demirbas05wirelesssenso} is a theoretical research on environment monitoring. They provide necessary constraints and measured phenomena to implement any of structural, indoor and extreme event monitoring. For indoor environment monitoring temperature, humidity, true-light sensors, infrared-based presence sensors, and chemical sensors are useful and every environment monitoring application should consist of at least of these sensors. They as well point out that "interdisciplinary collaboration between researchers from computer science and structural engineering" is a key requirement for the monitoring of large public buildings. 
 
-In [3] is a research that by surveying more than 150 persons in Europe and Asia provide information of what environmental factors are important and how to present them to users, to build indoor environment monitoring system. The emphasis is put on designing easy to use and easy to understand user interface of such systems.
+In \cite{szucheng} is a research that by surveying more than 150 persons in Europe and Asia provide information of what environmental factors are important and how to present them to users, to build indoor environment monitoring system. The emphasis is put on designing easy to use and easy to understand user interface of such systems.
 
-One example of environmental monitoring is buildings power consumption monitoring. [4] is such an example. This paper provide a description of the power monitoring system in terms of implementation and use, as well provide some examples of the benefits and savings that have been achieved through its use. By monitored values they calculate: (1) percent power use is calculated for each distribution panel and for each tenant, (2) tenant estimated energy cost month to date, (3) estimated $CO_2$ emissions month to date and (4) power use per unit area (watts per square foot). Which then is used to identify and prioritize HVAC optimization programs as well as to assess and quantify the effects of changes on energy consumption.
+One example of environmental monitoring is buildings power consumption monitoring. \cite{bldg} is such an example. This paper provide a description of the power monitoring system in terms of implementation and use, as well provide some examples of the benefits and savings that have been achieved through its use. By monitored values they calculate: (1) percent power use is calculated for each distribution panel and for each tenant, (2) tenant estimated energy cost month to date, (3) estimated $CO_2$ emissions month to date and (4) power use per unit area (watts per square foot). Which then is used to identify and prioritize HVAC optimization programs as well as to assess and quantify the effects of changes on energy consumption.
 
-[4] presents a Building Monitoring system based on Wireless Sensor Networks - BMWSN. Which is a clustering-based network specified for building environment monitoring. In this system temperature/ humidity sensors (SHT11), light sensors (STL2550), and human detection sensors
+{\cite{bldg}} presents a Building Monitoring system based on Wireless Sensor Networks - BMWSN. Which is a clustering-based network specified for building environment monitoring. In this system temperature/ humidity sensors (SHT11), light sensors (STL2550), and human detection sensors
 (BISS0001) are used. The cluster-heads perform data aggregation and form a tree hierarchy to forward data to server. System implements simple alarm messaging to inform user of exceeded environmental variables, but no active environment control is implemented.
 
-[6] presents development of a smart sensor network which allows the monitoring of the parameters in the workplace required for ergonomic assessment of working conditions. Phenomena measured are temperature (TC1047A), humidity (HCH-1000), intensity of light (OPT101) and ambient noise (SPM0404LE5H-QB-38342). Proposed system is tested in very small scale compared to the previous systems, but provides insight of how environmental parameters can be measured in workplace.
+\cite{qifen} presents development of a smart sensor network which allows the monitoring of the parameters in the workplace required for ergonomic assessment of working conditions. Phenomena measured are temperature (TC1047A), humidity (HCH-1000), intensity of light (OPT101) and ambient noise (SPM0404LE5H-QB-38342). Proposed system is tested in very small scale compared to the previous systems, but provides insight of how environmental parameters can be measured in workplace.
 
-Besides distributed indoor environment monitoring systems there are other methods used for the same purpose. One such method is by using handheld devices. They are frequently referred to as "Indoor Environmental Quality" instruments. Price for such devices is usually very large drawback, because one such device can cost even several thousand US dollars, furthermore data often can be used only locally or best case scenario saved on SD card. But on high side of such devices is accuracy and variety of sensors in such device. For example IEQ Check\texttrademark\ produced  by Bacharach can use up to 7 differnet sensors - temperature, relative humidity and variation of Carbon Dioxide ($CO_2$), Carbon Monoxide (CO), Oxygen ($O_2$), Formaldehyde (HCHO), Total Volatile Organic Compounds (TVOCs), Nitrogen Dioxide ($NO_2$), Nitric Oxide (NO), Sulfur Dioxide ($SO_2$), Ammonia ($NH_3$), Hydrogen Sulfide ($H_2${\it S}) and Combustible Gases [7]. Other devices can even detect dust (even nano-scale), measure airflow [8]
+Besides distributed indoor environment monitoring systems there are other methods used for the same purpose. One such method is by using handheld devices. They are frequently referred to as "Indoor Environmental Quality" instruments. Price for such devices is usually very large drawback, because one such device can cost even several thousand US dollars, furthermore data often can be used only locally or best case scenario saved on SD card. But on high side of such devices is accuracy and variety of sensors in such device. For example IEQ Check\texttrademark\ produced  by Bacharach can use up to 7 differnet sensors - temperature, relative humidity and variation of Carbon Dioxide ($CO_2$), Carbon Monoxide (CO), Oxygen ($O_2$), Formaldehyde (HCHO), Total Volatile Organic Compounds (TVOCs), Nitrogen Dioxide ($NO_2$), Nitric Oxide (NO), Sulfur Dioxide ($SO_2$), Ammonia ($NH_3$), Hydrogen Sulfide ($H_2${\it S}) and Combustible Gases \cite{Teodora}. Other devices can even detect dust (even nano-scale), measure airflow \cite{IEQ}
 
 % if have a single appendix:
 %\appendix[Proof of the Zonklar Equations]
@@ -673,51 +677,100 @@ Besides distributed indoor environment monitoring systems there are other method
 %
 
 \section{Proposed System Architecture}
-As previouse research shows none of existing solutions can be reused entirely being a solution for our reasearch problem. Thus we have worked on a proposal and netwroks architecture that might solve both problems: meeting room reservation vs. actual utilization monitoring and scalable solution for monitoring and analysis of office environment. 
-
+As previous research shows none of existing solutions can be reused entirely being a solution for our research problem. Thus we have worked on a proposal and networks architecture that might solve both problems: meeting room reservation vs. actual utilization monitoring and scalable solution for monitoring and analysis of office environment. 
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=2.5in]{IoT_Scheme}
 \includegraphics[width=3.5in]{IoT_Scheme}
 \caption{Scheme for the proposed Internet of Things office environment monitoring solution.}
 \label{IoT_Scheme}
 \end{figure}
-
-Referring to figure \ref{IoT_Scheme}  where a scheme for the proposed Internet of Things office environment monitoring solution is depicted the main parts of the system can be discussed. The system consists of two main parts: on-site destributed heterodenouse wireless sensor network and sensorial data storage and processing warehouse formed using cloud computing technology, here Azure provided cloud platform has been selected. 
-
-On-site sensor network is heterogenouse because of three different types of heterogenousity:
+Referring to figure \ref{IoT_Scheme} where a scheme for the proposed Internet of Things office environment monitoring solution is depicted the main parts of the system can be discussed. The system consists of two main parts: on-site distributed heterogeneous wireless sensor network and sensorial data storage and processing warehouse formed using cloud computing technology, here Azure provided cloud platform has been selected. 
+On-site sensor network is heterogeneous because of three different types of heterogeneity:
 \begin {itemize}
-\item Communication protocols - In the current work we are combining different communication protocols. Sensorial data may be trasfered via proprietary protocol stack and/or standard-based protocol stacks. Here we are testing our designed highly-scalable WSN protocol stack's interconnection with different standartized solutions, like ZigBee and Wi-Fi enabled nodes.
-\item Sensor nodes' hardware - since there are presented two ZigBee and Wi-Fi communication protocols based on standards it is obviouse that corresponding sensor nodes should have thase standards enablement hardware. For instance to implements ZigBee communication sensor node should be equiped with IEEE 802.15.4 fully compatible radio chip. As well to enable platform readiness for Wi-Fi protocol stack corresponding devices should enable 802.11b/g/n support in the hardware layer, too. Apart from these two examples third one the proprietary protocol stack can not be so demanding on particular hardware since it should only satisfy the very basic software needs.
-\item Powering mode - mostly wireless sensor nodes are battery-powered devices. But in the current solution we have NetAtmo Wi-Fi-enabled sensor nodes powered as trough battary as well via power line. Such combination is provided because of architectural limitations of that solution: there is a GW and only some sensor nodes, normally only one per GW. ZigBee solution needs different type of nodes, too. Tey are: coordinator, router and end device, where coordinator and router nodes with greate probability may be asked to be constantly powered because of the scenario they are fulfilling. Talking about proprietary WSN there might be both powering modes with different sensor nodes.
+\item Communication protocols - In the current work we are combining different communication protocols. Sensorial data may be transferred via proprietary protocol stack and/or standard-based protocol stacks. Here we are testing our designed highly-scalable WSN protocol stack's interconnection with different standardized solutions, like ZigBee and Wi-Fi enabled nodes.
+\item Sensor nodes' hardware - since there are presented two ZigBee and Wi-Fi communication protocols based on standards it is obvious that corresponding sensor nodes should have these standards enablement hardware. For instance to implements ZigBee communication sensor node should be equipped with IEEE 802.15.4 fully compatible radio chip. As well to enable platform readiness for Wi-Fi protocol stack corresponding devices should enable 802.11b/g/n support in the hardware layer, too. Apart from these two examples third one the proprietary protocol stack can not be so demanding on particular hardware since it should only satisfy the very basic software needs.
+\item Powering mode - mostly wireless sensor nodes are battery-powered devices. But in the current solution we have Netatmo Wi-Fi-enabled sensor nodes powered as trough battery as well via power line. Such combination is provided because of architectural limitations of that solution: there is a GW and only some sensor nodes, normally only one per GW. ZigBee solution needs different type of nodes, too. They are: coordinator, router and end device, where coordinator and router nodes with greater probability may be asked to be constantly powered because of the scenario they are fulfilling. Talking about proprietary WSN there might be both powering modes with different sensor nodes.
+\end {itemize}
+It is clear that sensorial data is being collected on wireless sensor layer then transmitted to the cloud platform. Since we have three different technologies selected to be parts of WSN, the data transformation component should be provided. That component, here it is a Gateway will gather data from one protocol stack and transform it to another one, here via TCP/IP protocol stack. Gateway modules (GW) are different for Netatmo WSN, for proprietary WSN and for Zigbee solutions. Since Netatmo sensor network solution in common consists of two nodes: indoor one and outdoor one, the GW for Netatmo is the same sensorial indoor module. The communication between this solution components, e.g. sensor nodes is performed via Wi-Fi. Thus Netatmo is already TCP/IP-ready devices, but they need to transfer the data to the generalization system's part - cloud computing platform. For that purpose one of sensor nodes is different by design and is statically line-powered. In the context of the proposed system we can call it as GW node. Gateway node used for Zigbee network to access WAN and transmit data is constructed based Raspberry Pi (RPi) device. An Xbee RF chip \cite{Xbee_chip} connected to RPi forms interface to Zigbee WSN. Thus RPi device here is performing a GW functionality: it has two different protocol stacks available on both physical and logic levels and its application is responsible for data retransmission from Zigbee network to TCP/IP till the cloud server. More interesting solution in the whole proposed system is our developed proprietary version of wireless sensor network. From here on we would like to propose to use another one office monitoring IoT solution's architecture depicted on figure \ref{iot_arch}. Here are all three different WSN layer's technologies are depicted as well there is defined that whole data is then gathered via REST API calls and stored on cloud server. Turning back to the solution based on our WSN approach it is valuable to mention that there are many points behind our solution proposition:
+\begin {itemize}
+\item Existing WSN layer solutions has multiple drawbacks like hard-to-scale architecture designs, for instance Netatmo solution can have one GW and maximum of four simple SNs. As well Zigbee network topology is strictly defined and consist of predefined specific nodes that might be a weak points of whole system being a points of failure.
+\item Hardware solution limitation is another kind of drawback we see. Selecting some standard as a basis for communication protocols we are strictly tightened with physical layers device components to use. For instance Zigbee solution demands to have RF chip that is IEEE 802.15.4 ready. With elimination of such drawback the WSN solution may be freely adopted for different environment conditions. For instance if ISM bands are fully occupied with intense communications there, we might choose physical layer's solution based on, e.g. 433MHz band.
+\item Application limitations are last but not least drawbacks we have discovered. Proprietary solution gives maximal flexibility in choosing the application to run. For instance we can add any kind of sensors we need to fulfil a test. Apart from such possibilities existing solutions frequently are some application oriented. For instance, Netatmo solution has embedded set of sensors that can't be changed or extended without refactoring of whole node.
 \end {itemize}
 
-It is clear that sensorial data should be collected on wireless sensor layer and trasmitted to the cloud platform. Since we have three different technologies selected as parts of WSN, the trasnformation component(-s) should be provided. That component, here it is a Gateway will gather data from one protocol stack and transfers it to another one, here via TCP/IP protocol stack 
+
+\begin{table}[!t]
+% increase table row spacing, adjust to taste
+\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+%\extrarowheight %as needed to properly center the text within the cells
+\caption {Comparison of Two WSN Development Approaches}
+\label{table_comparison}
+%\centering
+% Some packages, such as MDW tools, offer better commands for making tables
+% than the plain LaTeX2e tabular which is used here.
+\begin{tabular}{|l|l|l|}
+\hline
+{\bf Name} & {\bf Our proposed solution} & {\bf Standardized solution}\\
+\hline
+Usability & \vtop{\hbox{\strut Flexible amount of SNs in}\hbox{\strut a room}} & Use-cases are pre-defined\\
+\hline
+Sensor variety & \vtop{\hbox{\strut Different sensors’ utilization}\hbox{\strut for monitoring purposes}} & \vtop{\hbox{\strut Static sensor-wise}\hbox{\strut solutions}}\\
+\hline
+Protocol stack & \vtop{\hbox{\strut Communication protocols}\hbox{\strut can be chosen according}\hbox{\strut to current task}} & \vtop{\hbox{\strut Solutions are designed}\hbox{\strut for particular tasks and }\hbox{\strut can be reused in other}\hbox{\strut circumstances with }\hbox{\strut possible limitations}}\\
+\hline
+Integration & \vtop{\hbox{\strut Fast integration with other}\hbox{\strut systems}} & \vtop{\hbox{\strut Pre-developed API as}\hbox{\strut integration and access}\hbox{\strut interface}}\\
+\hline
+Costs & \vtop{\hbox{\strut Reduced costs due to}\hbox{\strut cheaper hardware}} & \vtop{\hbox{\strut Higher, because of already}\hbox{\strut produced hardware and}\hbox{\strut software}}\\
+\hline
+Development time & Longer & \vtop{\hbox{\strut Shorter to longer if}\hbox{\strut additional features must}\hbox{\strut be implemented}}\\
+\hline
+\end{tabular}
+\end{table}
 
 
+Other points of different WSN development approaches can be found in the table \ref{table_comparison}. Because of that we are going to focus mainly on our proposed, proprietary WSN layer solution in the next paper's parts.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.5in]{iot_arch}
+\caption{The proposed office monitoring IoT solution's architecture.}
+\label{iot_arch}
+\end{figure}
 \section{WSN Layer Implementation}
-
+\subsection{Development of Sensor Node}
+As a basis module for SN we have selected to use Arduino module under model name Nanov3. The module is depicted at figure \ref{ArduinoNano3}. In the current SN version the functionality of each node should be ambient parameter monitoring with the help of three different sensors:
+\begin{itemize}
+\item Combined Temperature/Humidity sensor - DHT11 \cite{DHT_11} - low-cost 1-Wire sensor with the precision of 2$^{\circ}$C and 5\%RH. Connected to Arduino pins directly and with help of DHT11 library reads the sensorial data from the sensor.
+\item Light intensity sensor - BHT1750FVI \cite{BHT_1750} - easy to use soldered sensor with appropriate ready for development C++ languages libraries. 
+\item PIR Sensor -\cite{PIR_s} - HC-SR501 - Motion detection sensor with variable period and cool down timer configurations. Useful in people movement detection tasks, for instance, we have used it for that purposes.
+\end{itemize}
+An application on each SN is necessary to deliver a data to cloud server. Thus we have developed an all-in-one source code for any kind of version Nano module equipment. The crucial for sensor network is to establish Energy Saving operation.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.5in]{ArduinoNano3}
+\caption{Arduino Nano v3 module as basis for SN development.}
+\label{ArduinoNano3}
+\end{figure}
 \subsection{Energy Saving Operation}
 The energy cost of transmitting a single bit of information is approximately the same as that needed for processing a thousand operations in a typical WSN \cite{Anastasi}. The lifetime of a sensor network can be extended by jointly applying different techniques. For example, energy efficient protocols are aimed at minimizing the energy consumption during network activities. However, a large amount of energy is consumed by node components, CPU, radio, sensors, etc., even if they are idle. Power management schemes are thus used for switching off node components that are not temporarily needed \cite{Anastasi_Survey}. 
 NRF24L01 radio chips were used in this project. It consumes 12.3mA receiving data at full speed (2Mbps on-air data-rate) and 11.3mA sending data at 0dBm. Using simple batteries with this transceiver, WSN will operate approximately for 35 hours if only communicating. WSN also consists of several sensors that also will consume battery energy, so it reduces lifetime to approximately 24 hours.
 Energy saving methods can extend WSN lifetime for more times. Using SLEEP/WAKEUP protocol proposed in \cite{Anastasi_Survey} is possible that WSN will work for months without batteries change. WSN can use a Pipelined Tone Wakeup (PTW) scheme proposed in \cite {Yang}. There are two different channels for wakeup signals and data. In wakeup channel transmits only wakeup tone to awake neighboring nodes.
-
-
 \begin{figure}[!t]
 \centering
 \includegraphics[width=2.5in]{wake_up}
 \caption{Pipelined wakeup procedure in PTW}
 \label{wake_up}
 \end{figure}
- 
 Let’s suppose that node A has to transmit a data message to node C through node B. At time $t_0$, A starts sending a wakeup tone over wakeup channel. This tone awakes all A’s neighbors. At time $t_1$ A sends a notification packet to node B on the data channel to inform that the next data packet will be destined to B. All A’s neighbors, instead node B, learn that the following message is not intended for them and they turn off their data radio. Instead, B realizes to be the destination of next data message, and replies with a wakeup acknowledgment on the data channel. After acknowledgement, A starts transmitting the data packet on the data channel. At the same time, B starts sending a tone on the wakeup channel to awake all its neighbors. As shown in fiure \ref{wake_up}, the packet transmission from A to B on the data channel, and the B’s tone transmission on the wakeup channel are done in parallel.
 As the WSN will be used in offices with known work-time, then all nodes will work at this time. After work-time all nodes power off all sensors, radio and then go to deep SLEEP mode. According to office, nodes will WAKEUP several minutes before work-time starts. $CO_2$ sensor can be disconnected from power or be connected only to make a few measurements of the air, and then again disconnected. This will give significant energy economy, because there is known that the air quality is best before work-time.
-
 \subsection{Secure Communication}
-To create the reliable system it is needed to ensure data protection at all layers. Since wireless sensor nodes are limited in computational resources, it is not possible to use typical encryption. As a solution to existing problem it is possible to use Elliptic curve cryptography. It would allow establishing data protection comparable with typical encryption protocols like TLS, but using less computational resoursec. ECC - cryptographic schemes based relying on scalar multiplication of elliptic curve points. For elliptic curves, the problem assumed to be intractable is finding the discrete logarithm of an element. \cite {ECC} Key in elliptic curve cryptography can be shorter, but still offering same security as RSA. For example, a 160-bit ECC key provides the same level of security as a 1024-bit RSA key, and a 224-bit ECC key provides the same security as a 2048-bit RSA key. Smaller keys mean faster computation, lower power consumption, and memory and bandwidth savings \cite{Huge}.
-
+To create the reliable system it is needed to ensure data protection at all layers. Since wireless sensor nodes are limited in computational resources, it is not possible to use typical encryption. As a solution to existing problem it is possible to use Elliptic curve cryptography. It would allow establishing data protection comparable with typical encryption protocols like TLS, but using less computational resource. ECC - cryptographic schemes based relying on scalar multiplication of elliptic curve points. For elliptic curves, the problem assumed to be intractable is finding the discrete logarithm of an element. \cite {ECC} Key in elliptic curve cryptography can be shorter, but still offering same security as RSA. For example, a 160-bit ECC key provides the same level of security as a 1024-bit RSA key, and a 224-bit ECC key provides the same security as a 2048-bit RSA key. Smaller keys mean faster computation, lower power consumption, and memory and bandwidth savings \cite{Huge}.
 \section{Conclusion}
-The conclusion goes here.
+Since that is work-in-progress paper we have showed and checked the possibility to interconnect different technologies together with the common API. 
+In the current situation we have different WSNs connected together forming heterogeneous WSN. The multi technology verification and configuration is done at cloud side. Such approach adds simplicity to GWs and SNs. As well WSN software designers are focused on sensorial use cases rather than on how to communicate between technology-different devices.
+Our investigation of the current situation shows that none of existing solutions is that closed to our flexible and scalable solution.
+Apart from done, we have prepared a list of items we should cover in the next releases. Such tasks are: routing on WSN layer, Security on all communication components, etc.
+
 
 % if have a single appendix:
 %\appendix[Proof of the Zonklar Equations]
@@ -783,6 +836,16 @@ The conclusion goes here.
 \bibitem{Usha} Satish, Usha. "Is $CO_2$ an Indoor Pollutant? Direct Effects of Low to Moderate $CO_2$ Concentrations on Human Decision? Making Performance." {\it Environmental health perspectives} (2014).
 \bibitem{ECC} SEC1: Elliptic Curve Cryptography [Electronic resource] – http://www.secg.org/download/aid-385/sec1\_final.pdf – Resource reported at 2009, 19’th of October
 \bibitem{Huge} Huge Advance for Tiny Devices [Electronic resource] – http://research.sun.com /spotlight/2005\_02\_10.tiny\_devices.html – Resource reported at 2009, 19’th of October
+\bibitem{Demirbas05wirelesssenso} Murat Demirbas. Wireless Sensor Networks for Monitoring of Large Public Buildings. . p. 605--634 2005
+\bibitem{szucheng}Szu-Cheng Chien, Robert Zach and Ardeshir Mahdavi, “Developing user interfaces for monitoring systems in buildings”, IADIS International Conference Interfaces and Human Computer Interaction 2011, pages 29-36, ISBN: 978-972-8939-52-6
+\bibitem{bldg}BLDG services group inc., white paper “Power Monitoring in an Office Building”, 2011, p. 9, Edmonton Alberta, Canada
+\bibitem{qifen}, Qifen Dong, Li Yu, Huanjia Lu, Zhen Hong, Yourong Chen, “Design of Building Monitoring Systems Based on Wireless Sensor Networks”, Wireless Sensor Network, 2010, 2, 703-709, doi:10.4236/wsn.2010.29085
+\bibitem{Teodora} Teodora Trifonova, Valentina Markova, Ventseslav Draganov, KrasimiraAngelova and Vasil Dimitrov, “Smart sensor network for ergonomic evaluation of working environment”,  ICEST 2013, At Ohrid, Macedonia, Volume: vol.1 pp 371-375
+\bibitem{Xbee_chip} XBee 802.15.4 - Digi International. - {\it Internet resource: http://www.digi.com/products/wireless-wired-embedded-solutions/zigbee-rf-modules/point-multipoint-rfmodules/xbee-series1-module\#overview} Accessed at 08.11.2014.
+\bibitem {DHT_11} DHT11 - Humidity and Temperature Sensor [3732] Sunrom Technologies. - {\it http://www.sunrom.com/p/dht11-humidity-and-temperature-sensor} Accessed at 08.11.2014.
+\bibitem {BHT_1750} Digital 16bit Serial Output Type Ambient Light Sensor IC. - {\it http://www.dfrobot.com/image/data/SEN0097/BH1750FVI.pdf} Accessed at 08.11.2014.
+\bibitem {PIR_s} HC-SR501 PIR motion detector. - {\it http://www.mpja.com/download/31227sc.pdf}. Accessed at 08.11.2014.
+\bibitem{IEQ} IEQ Chek, product description, online: http://www.tequipment.net/assets/1/26/Documents/Bacharach/ 1510\_0002/1510\_0002\_doc\_1.pdf, Resource Accessed on: 26.10.2014
 \end{thebibliography}
 
 %\begin{thebibliography}{2}
